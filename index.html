@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Styles for the modal dialog */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Modal dialog -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <p>Will you marry me?</p>
+      <button id="yesButton">Yes</button>
+      <button id="noButton">No</button>
+    </div>
+  </div>
+
+  <script>
+    // Get the modal dialog
+    var modal = document.getElementById("myModal");
+
+    // Get the Yes and No buttons
+    var yesButton = document.getElementById("yesButton");
+    var noButton = document.getElementById("noButton");
+
+    // Display the modal dialog
+    modal.style.display = "block";
+
+    // Add click event listeners to the Yes and No buttons
+    yesButton.onclick = function() {
+      alert("I love you! 💖");
+      modal.style.display = "none";
+    };
+
+    noButton.onclick = function() {
+      alert("I'll keep asking until you say Yes! 😉");
+      modal.style.display = "block";
+    };
+  </script>
+
+</body>
+</html>
